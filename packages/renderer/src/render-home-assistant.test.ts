@@ -77,7 +77,7 @@ describe("renderHomeAssistant", () => {
 
       const install = readFileSync(join(dir, "home-assistant", "INSTALL.md"), "utf-8");
       expect(install).toContain("/config/www/crisiskit/");
-      expect(install).toContain("github.com/crisiskit/crisiskit");
+      expect(install).toContain("github.com/Stormbold/CrisisKit");
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }

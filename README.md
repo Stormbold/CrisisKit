@@ -29,7 +29,7 @@ See [docs/safety-boundaries.md](docs/safety-boundaries.md).
 ## Quickstart
 
 ```bash
-git clone https://github.com/crisiskit/crisiskit.git
+git clone https://github.com/Stormbold/CrisisKit.git
 cd crisiskit
 pnpm install && pnpm build
 

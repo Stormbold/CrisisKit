@@ -15,7 +15,7 @@ export const MEDICATION_DISCLAIMER_DE =
 
 export const REVIEW_WARNING_DAYS = 90;
 
-export const CRISISKIT_REPO_URL = "https://github.com/crisiskit/crisiskit";
+export const CRISISKIT_REPO_URL = "https://github.com/Stormbold/CrisisKit";
 
 export const PROJECT_FILES = [
   "config.yml",

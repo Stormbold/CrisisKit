@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-git clone https://github.com/your-org/crisiskit.git
+git clone https://github.com/Stormbold/CrisisKit.git
 cd crisiskit
 pnpm install
 pnpm build
