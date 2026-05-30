@@ -6,13 +6,14 @@ Emergencies are the wrong time to search through chats, PDFs and cloud documents
 
 No account. No backend. No tracking. No panic.
 
-## What CrisisKit is
+## Features
 
-CrisisKit helps you prepare and publish **offline emergency information** for your own household, club, team or local group.
-
-- YAML in → static HTML, printable PDFs out
-- Local-first, versionable, printable
-- Open source (MIT)
+- **YAML in → static HTML & PDF out** — contacts, checklists, meeting points, pets, medication, documents
+- **Browser editor** — add, edit and remove entries without touching YAML by hand
+- **Home Assistant export** — Lovelace dashboard, package automations, install guide
+- **Material Design 3** — calm, readable offline pages
+- **Local-first** — your data never leaves your machine during build
+- **Open source** — MIT license
 
 ## What CrisisKit is NOT
 
@@ -20,34 +21,42 @@ CrisisKit does **not** provide official warnings, medical advice, legal advice o
 
 See [docs/safety-boundaries.md](docs/safety-boundaries.md).
 
+## Requirements
+
+- Node.js 20+
+- [pnpm](https://pnpm.io/) 9+
+
 ## Quickstart
 
 ```bash
+git clone https://github.com/crisiskit/crisiskit.git
+cd crisiskit
 pnpm install && pnpm build
 
 # Create a project
 node packages/cli/dist/index.js init --template household-de --dir ./crisiskit
 
-# Edit YAML files in ./crisiskit/
-# Or use the browser editor:
+# Edit in the browser (optional)
 node packages/cli/dist/index.js edit --input ./crisiskit --output ./dist
 
-# Build
+# Build static output
 node packages/cli/dist/index.js build --input ./crisiskit --output ./dist
 
-# Preview
+# Preview locally
 node packages/cli/dist/index.js preview --dir ./dist
 ```
+
+After `pnpm link --global` or `npm install -g` from `packages/cli`, use the `crisiskit` command directly.
 
 ## CLI commands
 
 | Command | Description |
 |---------|-------------|
 | `crisiskit init` | Create a new project from a template |
-| `crisiskit build` | Generate HTML and PDF output |
+| `crisiskit build` | Generate HTML, PDF and optional Home Assistant export |
 | `crisiskit preview` | Serve built output locally |
 | `crisiskit validate` | Validate YAML and show warnings |
-| `crisiskit edit` | Edit YAML in the browser (add, change, remove entries) |
+| `crisiskit edit` | Edit YAML in the browser |
 
 ## Example YAML
 
@@ -59,6 +68,8 @@ contacts:
     phone: "+49 171 4829103"
     priority: 1
 ```
+
+Full data model: [docs/data-model.md](docs/data-model.md)
 
 ## Output
 
@@ -73,33 +84,49 @@ dist/
   pets.html
   medication.html
   emergency-card.html
+  offline-checklist.html
   assets/
   pdf/emergency-card.pdf
   pdf/offline-checklist.pdf
+  home-assistant/          # when home-assistant.yml enabled
+    lovelace-dashboard.yaml
+    package.yaml
+    INSTALL.md
 ```
 
 ## Templates
 
-- `examples/household-de` — Family emergency kit (German)
-- `examples/club-de` — Sports club emergency plan
-- `examples/selfhoster-outage` — Homelab power outage runbook
-- `examples/home-assistant-de` — Household + [Home Assistant](docs/home-assistant.md) dashboard export
+| Template | Description |
+|----------|-------------|
+| `household-de` | Family emergency kit (German) |
+| `club-de` | Sports club emergency plan |
+| `selfhoster-outage` | Homelab power outage runbook |
+| `home-assistant-de` | Household + Home Assistant dashboard export |
+
+Examples live in [`examples/`](examples/).
 
 ## Home Assistant
 
-CrisisKit can export a Lovelace dashboard, HA package and install guide when `home-assistant.yml` has `enabled: true`. Configure entities and automations in YAML or via `crisiskit edit` (browser editor). Copy built files to `/config/www/crisiskit/` — fully local, compatible with [Home Assistant](https://www.home-assistant.io/).
+Enable export in `home-assistant.yml` or via `crisiskit edit`. After build, copy `dist/` to `/config/www/crisiskit/` on your Home Assistant host.
 
 See [docs/home-assistant.md](docs/home-assistant.md).
 
-## Screenshots
+## Development
 
-<!-- TODO: Add screenshots after first build -->
+```bash
+pnpm install
+pnpm build
+pnpm test
+pnpm lint
+```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Privacy
 
 CrisisKit does not send your emergency data anywhere. It reads local YAML files and generates static output on your machine.
 
-**Warning:** If you deploy a generated site publicly, private contacts, addresses or medical notes may become visible. Only publish after review.
+**Warning:** Generated sites may contain private contacts, addresses or medical notes. Only publish after review.
 
 ## License
 

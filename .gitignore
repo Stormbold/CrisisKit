@@ -1,11 +1,46 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
-*.log
-.DS_Store
-.env
-.env.*
-coverage/
-.playwright/
+packages/*/dist/
+
+# Generated vendor copies (copied on build/edit)
+packages/cli/dist/editor/assets/vendor/
+packages/cli/src/editor/assets/vendor/
+
+# Example build artifacts
 examples/*/dist/
+
+# Test / scratch output
 test-project/
 test-dist/
+coverage/
+
+# Environment & secrets
+.env
+.env.*
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Playwright
+.playwright/
+
+# Vitest cache
+.vite/

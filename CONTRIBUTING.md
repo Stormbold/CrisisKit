@@ -12,7 +12,15 @@ pnpm test
 
 ## Project structure
 
-See [AGENTS.md](AGENTS.md) for architecture overview.
+```
+packages/
+  schemas/    Zod schemas and YAML parsing
+  core/       Load project, validate, save
+  renderer/   HTML templates, PDF generation, Home Assistant export
+  cli/        Commander CLI and browser editor
+examples/     Sample YAML projects
+docs/         Documentation
+```
 
 ## Pull requests
 
@@ -26,7 +34,6 @@ See [AGENTS.md](AGENTS.md) for architecture overview.
 - Add English household template
 - Add print stylesheet improvements
 - Add QR code generation for static pages
-- Add medication disclaimer validation
 - Add GitHub Pages deployment docs
 
 ## Code of conduct
