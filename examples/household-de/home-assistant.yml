@@ -1,0 +1,12 @@
+enabled: false
+
+www:
+  subdirectory: crisiskit
+
+dashboard:
+  title: "Notfall"
+  icon: mdi:shield-home
+  path: notfall
+
+entities: []
+automations: []

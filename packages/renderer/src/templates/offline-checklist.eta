@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="<%= it.language %>">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline-Checklisten — <%= it.projectName %></title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <style>
+    @page { size: A4; margin: 15mm; }
+    body { background: white; }
+    .checklist-block { break-inside: avoid; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><%= it.projectName %> — Offline-Checklisten</h1>
+    <p class="meta">Letzter Prüfstand: <%= it.lastReviewed %></p>
+    <div class="disclaimer"><%= it.disclaimerText %></div>
+    <% it.checklists.forEach(function(checklist) { %>
+    <section class="card checklist-block">
+      <h2><%= checklist.title %></h2>
+      <% if (checklist.description) { %><p class="meta"><%= checklist.description %></p><% } %>
+      <ol class="checklist-items">
+        <% checklist.items.forEach(function(item) { %>
+        <li><%= item %></li>
+        <% }) %>
+      </ol>
+    </section>
+    <% }) %>
+  </div>
+</body>
+</html>

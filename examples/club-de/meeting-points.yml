@@ -1,0 +1,10 @@
+meeting_points:
+  - name: "Evakuierungstreffpunkt"
+    location: "Parkplatz Nord, Hauptstraße 12"
+    when: "Bei Evakuierung des Vereinsheims"
+    notes: "Rollcall durch Mannschaftsführer"
+
+  - name: "Alternativtreffpunkt"
+    location: "Sportplatz Nachbarverein"
+    when: "Wenn Parkplatz Nord nicht erreichbar"
+    notes: "Nur bei Großereignissen kommunizieren"

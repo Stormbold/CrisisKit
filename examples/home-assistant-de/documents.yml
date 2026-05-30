@@ -1,0 +1,13 @@
+documents:
+  - name: "Ausweise und Versicherungen"
+    location: "Ordner Wohnzimmer, Regal links"
+    original_or_copy: both
+
+  - name: "Home Assistant Backup"
+    location: "NAS /backup und USB im Schreibtisch"
+    original_or_copy: digital
+    notes: "Snapshot wöchentlich — vor Sturm prüfen"
+
+  - name: "USV-Dokumentation"
+    location: "Keller, am Rack"
+    original_or_copy: copy

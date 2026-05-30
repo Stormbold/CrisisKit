@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrisisKit Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="/assets/styles/m3-theme.css">
+  <link rel="stylesheet" href="/assets/styles/editor.css">
+  <!-- import map injected by edit server -->
+  <script type="importmap">{"imports":{}}</script>
+  <script type="module" src="/assets/scripts/m3-components.js"></script>
+  <script type="module" src="/assets/scripts/app.js"></script>
+</head>
+<body>
+  <div class="editor-shell">
+    <header class="editor-header">
+      <div class="editor-header__title">
+        <md-icon>edit_note</md-icon>
+        <div>
+          <h1>CrisisKit Editor</h1>
+          <p id="project-name">Lade Projekt…</p>
+        </div>
+      </div>
+      <div class="editor-header__actions">
+        <span id="save-status" class="save-status"></span>
+        <md-outlined-button id="btn-build">Build &amp; Vorschau</md-outlined-button>
+      </div>
+    </header>
+
+    <div class="editor-layout">
+      <nav class="editor-nav">
+        <md-list id="section-nav"></md-list>
+      </nav>
+
+      <main class="editor-main">
+        <div id="section-content"></div>
+      </main>
+    </div>
+  </div>
+
+  <md-dialog id="edit-dialog">
+    <div slot="headline" id="dialog-title">Bearbeiten</div>
+    <form slot="content" id="dialog-form" method="dialog" class="dialog-form"></form>
+    <div slot="actions">
+      <md-text-button form="dialog-form" value="cancel">Abbrechen</md-text-button>
+      <md-filled-button form="dialog-form" value="save" type="submit">Speichern</md-filled-button>
+    </div>
+  </md-dialog>
+
+  <md-dialog id="confirm-dialog">
+    <div slot="headline">Eintrag entfernen?</div>
+    <div slot="content" id="confirm-text">Dieser Eintrag wird aus der YAML-Datei gelöscht.</div>
+    <div slot="actions">
+      <md-text-button id="confirm-cancel">Abbrechen</md-text-button>
+      <md-filled-button id="confirm-ok" class="danger-btn">Entfernen</md-filled-button>
+    </div>
+  </md-dialog>
+</body>
+</html>

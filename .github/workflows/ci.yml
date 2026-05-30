@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install
+
+      - run: pnpm lint
+
+      - run: pnpm test
+
+      - run: pnpm build
+
+      - name: Install Playwright browsers
+        run: pnpm --filter @crisiskit/renderer exec playwright install chromium
+
+      - name: Validate example project
+        run: node packages/cli/dist/index.js validate --input examples/household-de
+
+      - name: Build example project
+        run: node packages/cli/dist/index.js build --input examples/household-de --output examples/household-de/dist
+
+      - name: Verify outputs
+        run: |
+          test -f examples/household-de/dist/index.html
+          test -f examples/household-de/dist/emergency-card.html
+          test -f examples/household-de/dist/pdf/emergency-card.pdf
+          test -f examples/household-de/dist/pdf/offline-checklist.pdf

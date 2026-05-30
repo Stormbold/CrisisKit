@@ -1,0 +1,9 @@
+medication:
+  disclaimer: "Diese Liste dient nur zur privaten Dokumentation. Dosierung und Einnahme müssen ärztlich oder pharmazeutisch geklärt sein."
+  persons:
+    - name: "Lisa Weber"
+      items:
+        - name: "Blutdruckmittel"
+          dosage: "laut Packungsbeilage / ärztliche Vorgabe"
+          location: "Bad, Medikamentenschrank oben"
+          notes: "Nicht ohne Rücksprache ändern"

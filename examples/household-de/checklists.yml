@@ -1,0 +1,22 @@
+checklists:
+  - title: "Stromausfall"
+    description: "Kurzcheck für die ersten Minuten"
+    items:
+      - "Ruhe bewahren"
+      - "Taschenlampe suchen"
+      - "Sicherungen prüfen"
+      - "Nachbarn kurz prüfen, ob nur eigene Wohnung betroffen ist"
+      - "Handy-Akku sparen"
+      - "Radio / Powerbank bereitlegen"
+      - "Kühlschrank möglichst geschlossen halten"
+
+  - title: "Notgepäck"
+    description: "Dinge, die schnell greifbar sein sollten"
+    items:
+      - "Ausweisdokumente"
+      - "wichtige Medikamente"
+      - "Wasser"
+      - "kleine Snacks"
+      - "Taschenlampe"
+      - "Powerbank"
+      - "Haustierbedarf, falls relevant"

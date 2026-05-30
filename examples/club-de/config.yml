@@ -1,0 +1,18 @@
+project:
+  name: "TSV Rosenheim — Notfallplan"
+  type: "club"
+  language: "de"
+  region: "DE"
+  theme: "calm"
+  last_reviewed: "2026-05-30"
+
+disclaimer:
+  enabled: true
+  text: "Dieser Notfallplan ersetzt keine amtlichen Warnungen und keine Anweisungen von Einsatzkräften. Bei Gefahr im Verzug: 112."
+
+emergency_numbers:
+  emergency: "112"
+  police: "110"
+  poison_control: ""
+
+visibility: public

@@ -1,0 +1,19 @@
+checklists:
+  - title: "Stromausfall"
+    description: "Erste Schritte — auch mit Home Assistant prüfbar"
+    items:
+      - "Ruhe bewahren"
+      - "Taschenlampe holen (Küche, unter der Spüle)"
+      - "Home Assistant auf Tablet prüfen — welche Geräte offline sind"
+      - "USV-Laufzeit im Dashboard checken"
+      - "Handy-Akku sparen"
+      - "Nachbarn kurz informieren, falls nur eigene Wohnung betroffen"
+
+  - title: "Notgepäck"
+    description: "Griffbereit im Flur-Schrank"
+    items:
+      - "Ausweise und Versicherungskarten"
+      - "Medikamente Lisa Weber"
+      - "Wasserflaschen"
+      - "Powerbank"
+      - "Emma — Transportbox und Futter"

@@ -1,0 +1,22 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Treffpunkte</h2>
+    <% if (it.meetingPoints.length === 0) { %>
+    <p class="empty-text">Keine Treffpunkte hinterlegt.</p>
+    <% } else { %>
+    <% it.meetingPoints.forEach(function(point) { %>
+    <article class="meta-block">
+      <h3><%= point.name %></h3>
+      <dl class="meta-dl">
+        <dt>Ort</dt>
+        <dd><%= point.location %></dd>
+        <% if (point.when) { %><dt>Wann</dt><dd><%= point.when %></dd><% } %>
+        <% if (point.notes) { %><dt>Hinweis</dt><dd><%= point.notes %></dd><% } %>
+      </dl>
+    </article>
+    <% }) %>
+    <% } %>
+  </div>
+</md-elevated-card>

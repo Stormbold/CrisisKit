@@ -1,0 +1,24 @@
+contacts:
+  - name: "Thomas Weber"
+    role: "Familienkontakt"
+    phone: "+49 171 4829103"
+    priority: 1
+    notes: "Kann unter der Woche früher nach Hause"
+
+  - name: "Lisa Weber"
+    role: "Familienkontakt"
+    phone: "+49 171 4829104"
+    priority: 1
+    notes: "Kümmert sich um die Katze bei Abwesenheit"
+
+  - name: "Hausverwaltung Weber & Kolb"
+    role: "Gebäude / Schlüssel"
+    phone: "+49 8161 442900"
+    priority: 2
+    notes: "Mo–Do 8–16 Uhr"
+
+  - name: "Eva Kramer"
+    role: "Nachbarin"
+    phone: "+49 171 8834521"
+    priority: 3
+    notes: "Hat den Werkzeugschlüssel für den Keller"

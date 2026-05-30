@@ -1,0 +1,22 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Wichtige Dokumente</h2>
+    <% if (it.documents.length === 0) { %>
+    <p class="empty-text">Keine Dokumente hinterlegt.</p>
+    <% } else { %>
+    <% it.documents.forEach(function(doc) { %>
+    <article class="meta-block">
+      <h3><%= doc.name %></h3>
+      <dl class="meta-dl">
+        <dt>Ort</dt>
+        <dd><%= doc.location %></dd>
+        <% if (doc.original_or_copy) { %><dt>Typ</dt><dd><%= doc.original_or_copy %></dd><% } %>
+        <% if (doc.notes) { %><dt>Hinweis</dt><dd><%= doc.notes %></dd><% } %>
+      </dl>
+    </article>
+    <% }) %>
+    <% } %>
+  </div>
+</md-elevated-card>

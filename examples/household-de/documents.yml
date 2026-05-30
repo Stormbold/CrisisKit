@@ -1,0 +1,14 @@
+documents:
+  - name: "Personalausweise"
+    location: "Dokumentenordner im Wohnzimmer"
+    original_or_copy: both
+    notes: "Kopien im Notgepäck"
+
+  - name: "Versicherungspolicen"
+    location: "Dokumentenordner im Wohnzimmer"
+    original_or_copy: copy
+    notes: "Digital auf USB-Stick"
+
+  - name: "Impfausweis Haustier"
+    location: "Dokumentenordner im Wohnzimmer"
+    original_or_copy: original

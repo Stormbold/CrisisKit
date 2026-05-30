@@ -1,0 +1,16 @@
+contacts:
+  - name: "Thomas Weber"
+    role: "Familienkontakt"
+    phone: "+49 171 4829103"
+    priority: 1
+
+  - name: "Lisa Weber"
+    role: "Familienkontakt"
+    phone: "+49 171 4829104"
+    priority: 1
+
+  - name: "Eva Kramer"
+    role: "Nachbarin"
+    phone: "+49 171 8834521"
+    priority: 3
+    notes: "Hat den Werkzeugschlüssel für den Keller"

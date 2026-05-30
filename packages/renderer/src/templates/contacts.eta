@@ -1,0 +1,22 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Kontakte</h2>
+    <% if (it.contacts.length === 0) { %>
+    <p class="empty-text">Keine Kontakte hinterlegt.</p>
+    <% } else { %>
+    <md-list>
+      <% it.contacts.forEach(function(contact, index) { %>
+      <md-list-item type="link" href="tel:<%= contact.phone.replace(/\s/g, '') %>">
+        <md-icon slot="start">call</md-icon>
+        <div slot="headline"><%= contact.name %><% if (contact.priority <= 2) { %> · P<%= contact.priority %><% } %></div>
+        <div slot="supporting-text"><%= contact.role %><% if (contact.notes) { %> — <%= contact.notes %><% } %></div>
+        <div slot="trailing-supporting-text"><%= contact.phone %></div>
+      </md-list-item>
+      <% if (index < it.contacts.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+    <% } %>
+  </div>
+</md-elevated-card>

@@ -1,0 +1,11 @@
+contacts:
+  - name: "Stromversorger Störung"
+    role: "Netzbetreiber"
+    phone: "116 116"
+    priority: 1
+    notes: "Stromausfall melden"
+
+  - name: "Nachbar / Schlüssel"
+    role: "Physischer Zugang Rechenraum"
+    phone: "+49 170 5555555"
+    priority: 2

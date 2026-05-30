@@ -1,0 +1,18 @@
+documents:
+  - name: "USV-Dokumentation"
+    location: "Runbook-Ordner + Rack-Aufkleber"
+    original_or_copy: both
+    notes: "Modell, Kapazität, erwartete Laufzeit"
+
+  - name: "Router-Konfiguration Backup"
+    location: "Verschlüsseltes Backup auf NAS"
+    original_or_copy: digital
+
+  - name: "Netzwerkplan"
+    location: "Runbook-Ordner (Papier + PDF)"
+    original_or_copy: both
+    notes: "VLANs, IPs, Kritische Dienste"
+
+  - name: "Recovery-USB"
+    location: "Safe neben Rack"
+    original_or_copy: original

@@ -1,0 +1,40 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title"><%= it.checklist.title %></h2>
+    <% if (it.checklist.description) { %><p class="card-subtitle"><%= it.checklist.description %></p><% } %>
+    <md-list>
+      <% it.checklist.items.forEach(function(item, index) { %>
+      <md-list-item>
+        <md-icon slot="start">bolt</md-icon>
+        <div slot="headline"><%= item %></div>
+      </md-list-item>
+      <% if (index < it.checklist.items.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+  </div>
+</md-elevated-card>
+
+<% if (it.preparedItems && it.preparedItems.length > 0) { %>
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Vorbereitet haben</h2>
+    <md-list>
+      <% it.preparedItems.forEach(function(item, index) { %>
+      <md-list-item>
+        <md-icon slot="start">inventory_2</md-icon>
+        <div slot="headline"><%= item %></div>
+      </md-list-item>
+      <% if (index < it.preparedItems.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+  </div>
+</md-elevated-card>
+<% } %>
+
+<md-outlined-card class="disclaimer-card">
+  <div class="card-padding--tight">
+    <p class="disclaimer-card__text">Diese Checkliste ersetzt keine Anweisungen von Netzbetreibern oder Behörden. Bei Gefahr im Verzug: 112.</p>
+  </div>
+</md-outlined-card>

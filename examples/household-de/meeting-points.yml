@@ -1,0 +1,10 @@
+meeting_points:
+  - name: "Treffpunkt 1"
+    location: "Parkplatz vor der Schule"
+    when: "Wenn Wohnung/Haus nicht zugänglich ist"
+    notes: "Zu Fuß erreichbar"
+
+  - name: "Treffpunkt 2"
+    location: "Bei Verwandten außerhalb des Stadtteils"
+    when: "Wenn der gesamte Stadtteil betroffen ist"
+    notes: "Adresse separat offline speichern"

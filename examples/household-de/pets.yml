@@ -1,0 +1,9 @@
+pets:
+  - name: "Emma"
+    type: "Katze"
+    carrier_location: "Abstellkammer, Regal rechts"
+    food: "Nassfutter morgens und abends"
+    vet: "Tierarztpraxis Dr. Brenner, Freising"
+    notes:
+      - "Transportbox steht im Flur-Schrank"
+      - "Impfausweis im Dokumentenordner Wohnzimmer"

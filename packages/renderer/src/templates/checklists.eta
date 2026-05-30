@@ -1,0 +1,23 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<% if (it.checklists.length === 0) { %>
+<md-elevated-card><div class="card-padding"><p class="empty-text">Keine Checklisten hinterlegt.</p></div></md-elevated-card>
+<% } else { %>
+<% it.checklists.forEach(function(checklist) { %>
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title"><%= checklist.title %></h2>
+    <% if (checklist.description) { %><p class="card-subtitle"><%= checklist.description %></p><% } %>
+    <md-list>
+      <% checklist.items.forEach(function(item, index) { %>
+      <md-list-item>
+        <md-icon slot="start">check_circle</md-icon>
+        <div slot="headline"><%= item %></div>
+      </md-list-item>
+      <% if (index < checklist.items.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+  </div>
+</md-elevated-card>
+<% }) %>
+<% } %>

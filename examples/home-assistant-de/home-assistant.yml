@@ -1,0 +1,51 @@
+enabled: true
+
+www:
+  subdirectory: crisiskit
+
+dashboard:
+  title: "Notfall"
+  icon: mdi:shield-home
+  path: notfall
+
+# Entity IDs must match your Home Assistant installation.
+# Find them under Developer Tools → States.
+entities:
+  - entity_id: binary_sensor.stromnetz
+    label: "Stromnetz verfügbar"
+    icon: mdi:transmission-tower
+
+  - entity_id: sensor.usv_restzeit
+    label: "USV Restlaufzeit"
+    icon: mdi:battery-clock
+
+  - entity_id: binary_sensor.rauchmelder_kuche
+    label: "Rauchmelder Küche"
+    icon: mdi:smoke-detector
+
+  - entity_id: person.thomas_weber
+    label: "Thomas zuhause"
+    icon: mdi:account
+
+  - entity_id: person.lisa_weber
+    label: "Lisa zuhause"
+    icon: mdi:account
+
+automations:
+  - id: stromausfall_hinweis
+    alias: "CrisisKit: Stromausfall — Notfallmappe"
+    enabled: true
+    trigger_entity: binary_sensor.stromnetz
+    trigger_to: "off"
+    notify: persistent_notification
+    message: "Stromnetz offline. Checkliste: /local/crisiskit/power-outage.html"
+    enable_notfallmodus: true
+
+  - id: rauchmelder_hinweis
+    alias: "CrisisKit: Rauchmelder — Evakuierung prüfen"
+    enabled: true
+    trigger_entity: binary_sensor.rauchmelder_kuche
+    trigger_to: "on"
+    notify: persistent_notification
+    message: "Rauchmelder ausgelöst. Treffpunkte: /local/crisiskit/meeting-points.html"
+    enable_notfallmodus: true

@@ -1,0 +1,18 @@
+project:
+  name: "Homelab Stromausfall-Runbook"
+  type: "selfhoster"
+  language: "de"
+  region: "DE"
+  theme: "calm"
+  last_reviewed: "2026-05-30"
+
+disclaimer:
+  enabled: true
+  text: "Dieses Runbook dient der privaten IT-Dokumentation. Es ersetzt keine Anweisungen von Netzbetreibern oder Behörden."
+
+emergency_numbers:
+  emergency: "112"
+  police: "110"
+  poison_control: ""
+
+visibility: private

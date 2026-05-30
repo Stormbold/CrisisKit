@@ -1,0 +1,9 @@
+meeting_points:
+  - name: "Treffpunkt Schulhof"
+    location: "Parkplatz Grundschule Am Berg, Freising"
+    when: "Wenn die Wohnung nicht erreichbar ist"
+    notes: "Zu Fuß in ca. 8 Minuten erreichbar"
+
+  - name: "Treffpunkt Familie"
+    location: "Adresse der Schwiegereltern (offline notiert)"
+    when: "Wenn der Stadtteil betroffen ist"

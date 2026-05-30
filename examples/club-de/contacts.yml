@@ -1,0 +1,26 @@
+contacts:
+  - name: "Vereinsheim"
+    role: "Öffentlicher Kontakt"
+    phone: "+49 821 123456"
+    priority: 1
+    public: true
+    notes: "Ansprechbar während Trainingszeiten"
+
+  - name: "Erste-Hilfe-Beauftragter"
+    role: "Erste Hilfe / Sanitätsmaterial"
+    phone: "+49 170 2222222"
+    priority: 1
+    public: false
+
+  - name: "Schlüsselträger"
+    role: "Vereinsheim / Materialraum"
+    phone: "+49 170 3333333"
+    priority: 2
+    public: false
+    notes: "Nur für interne Telefonkette"
+
+  - name: "Vorsitzender"
+    role: "Leitung / Entscheidungen"
+    phone: "+49 170 4444444"
+    priority: 2
+    public: false

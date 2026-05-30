@@ -1,0 +1,38 @@
+{
+  "name": "@crisiskit/renderer",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./copy-vendor": {
+      "types": "./dist/copy-vendor.d.ts",
+      "import": "./dist/copy-vendor.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/assets",
+    "src/templates"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@crisiskit/core": "workspace:*",
+    "@crisiskit/schemas": "workspace:*",
+    "@lit/reactive-element": "^2.1.0",
+    "@material/web": "^2.4.1",
+    "eta": "^3.5.0",
+    "lit": "^3.3.0",
+    "lit-element": "^4.2.0",
+    "lit-html": "^3.3.0",
+    "playwright": "^1.52.0",
+    "tslib": "^2.8.0",
+    "yaml": "^2.8.0"
+  }
+}

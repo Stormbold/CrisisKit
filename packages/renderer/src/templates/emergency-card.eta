@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="<%= it.language %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notfallkarte — <%= it.projectName %></title>
+  <link rel="stylesheet" href="assets/styles/emergency-card.css?v=2">
+</head>
+<body>
+  <div class="card-page">
+    <div class="card-page__header">
+      <h1><%= it.projectName %></h1>
+      <div class="card-page__emergency">
+        <span class="card-page__emergency-label">Notruf</span>
+        <span class="card-page__emergency-number"><%= it.emergencyNumber %></span>
+      </div>
+    </div>
+    <div class="card-row"><strong>Kontakt</strong><span><%= it.emergencyContact %></span></div>
+    <div class="card-row"><strong>Treffpunkt</strong><span><%= it.meetingPoint %></span></div>
+    <% if (it.medicalNotes) { %>
+    <div class="card-row"><strong>Medizin</strong><span><%= it.medicalNotes %></span></div>
+    <% } %>
+    <% if (it.petsSummary) { %>
+    <div class="card-row"><strong>Haustiere</strong><span><%= it.petsSummary %></span></div>
+    <% } %>
+    <% if (it.documentsLocation) { %>
+    <div class="card-row"><strong>Dokumente</strong><span><%= it.documentsLocation %></span></div>
+    <% } %>
+    <p class="card-disclaimer"><%= it.disclaimerShort %></p>
+  </div>
+</body>
+</html>

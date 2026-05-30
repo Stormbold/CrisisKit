@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+@page {
+  size: 85mm 55mm;
+  margin: 3.5mm;
+}
+
+:root {
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-on-surface-variant: #40484c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-size: 8.5pt;
+  line-height: 1.35;
+  color: #1a2332;
+  background: #eceef1;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card-page {
+  width: 85mm;
+  min-height: 55mm;
+  padding: 3.5mm 4mm;
+  background: #faf8f4;
+  border-radius: 3mm;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2mm;
+  padding-bottom: 2mm;
+  margin-bottom: 2mm;
+  border-bottom: 0.5pt solid #c0c8cd;
+}
+
+.card-page h1 {
+  font-size: 9.5pt;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.15;
+  flex: 1;
+}
+
+.card-page__emergency {
+  flex-shrink: 0;
+  text-align: right;
+  background: #ffdad6;
+  padding: 1.5mm 2mm;
+  border-radius: 2mm;
+}
+
+.card-page__emergency-label {
+  display: block;
+  font-size: 5.5pt;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #410002;
+}
+
+.card-page__emergency-number {
+  font-size: 13pt;
+  font-weight: 700;
+  color: #ba1a1a;
+  line-height: 1;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 21mm 1fr;
+  gap: 1.5mm;
+  margin-bottom: 1.2mm;
+  align-items: baseline;
+}
+
+.card-row strong {
+  font-size: 6pt;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5a6578;
+}
+
+.card-row span {
+  font-size: 7.8pt;
+}
+
+.card-disclaimer {
+  margin-top: 2mm;
+  padding-top: 1.5mm;
+  font-size: 5.5pt;
+  color: #8a939f;
+  border-top: 0.4pt solid #c0c8cd;
+  line-height: 1.3;
+}
+
+@media print {
+  body {
+    background: white;
+    display: block;
+    min-height: auto;
+  }
+
+  .card-page {
+    box-shadow: none;
+    border: 0.4pt solid #333;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,5 @@
+meeting_points:
+  - name: "Rechenraum / Rack"
+    location: "Keller, Raum 3"
+    when: "Bei manuellem Eingriff nötig"
+    notes: "USV-Status zuerst prüfen"

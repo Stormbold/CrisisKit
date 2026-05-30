@@ -1,0 +1,38 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<md-outlined-card class="disclaimer-card disclaimer-card--alert">
+  <div class="card-padding--tight">
+    <span class="disclaimer-card__label">Wichtiger Hinweis</span>
+    <p class="disclaimer-card__text"><%= it.medicationDisclaimer %></p>
+  </div>
+</md-outlined-card>
+
+<% if (it.persons.length === 0) { %>
+<md-elevated-card><div class="card-padding"><p class="empty-text">Keine Medikamenten-Einträge hinterlegt.</p></div></md-elevated-card>
+<% } else { %>
+<% it.persons.forEach(function(person) { %>
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title"><%= person.name %></h2>
+    <% if (person.items.length === 0) { %>
+    <p class="empty-text">Keine Medikamente dokumentiert.</p>
+    <% } else { %>
+    <md-list>
+      <% person.items.forEach(function(item, index) { %>
+      <md-list-item>
+        <md-icon slot="start">medication</md-icon>
+        <div slot="headline"><%= item.name %></div>
+        <div slot="supporting-text">
+          <% if (item.dosage) { %>Dosierung: <%= item.dosage %><% } %>
+          <% if (item.location) { %><% if (item.dosage) { %> · <% } %>Ort: <%= item.location %><% } %>
+          <% if (item.notes) { %><% if (item.dosage || item.location) { %> · <% } %><%= item.notes %><% } %>
+        </div>
+      </md-list-item>
+      <% if (index < person.items.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+    <% } %>
+  </div>
+</md-elevated-card>
+<% }) %>
+<% } %>

@@ -1,0 +1,25 @@
+checklists:
+  - title: "Evakuierung Vereinsheim"
+    description: "Kurzablauf bei Feuer oder Gasgeruch"
+    items:
+      - "Alarm auslösen / 112 wählen"
+      - "Gebäude über nächsten Ausgang verlassen"
+      - "Zum Evakuierungstreffpunkt gehen"
+      - "Anwesenheit prüfen (Telefonkette starten)"
+      - "Auf Feuerwehr warten — nicht wieder eintreten"
+
+  - title: "Telefonkette"
+    description: "Reihenfolge bei wichtigen Mitteilungen"
+    items:
+      - "Vorsitzender informieren"
+      - "Mannschaftsführer informieren"
+      - "Betroffene Mitglieder/Eltern informieren"
+      - "Rückmeldung an Vorsitzenden"
+
+  - title: "Stromausfall"
+    description: "Kurzcheck im Vereinsheim"
+    items:
+      - "Taschenlampen in Materialraum holen"
+      - "Teilnehmer beruhigen und informieren"
+      - "Handy-Akkus schonen"
+      - "Bei längerem Ausfall: Evakuierung prüfen"

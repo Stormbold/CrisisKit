@@ -1,0 +1,14 @@
+documents:
+  - name: "Erste-Hilfe-Koffer"
+    location: "Materialraum, Regal links"
+    original_or_copy: original
+    notes: "Inventar jährlich prüfen"
+
+  - name: "Evakuierungsplan Gebäude"
+    location: "Aushang Eingangsbereich"
+    original_or_copy: copy
+
+  - name: "Mitgliederliste (Notfall)"
+    location: "Verschlüsselter USB-Stick beim Vorsitzenden"
+    original_or_copy: digital
+    notes: "Nur für interne Nutzung"

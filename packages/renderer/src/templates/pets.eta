@@ -1,0 +1,29 @@
+<md-outlined-button onclick="window.print()">Drucken</md-outlined-button>
+
+<% if (it.pets.length === 0) { %>
+<md-elevated-card><div class="card-padding"><p class="empty-text">Keine Haustiere hinterlegt.</p></div></md-elevated-card>
+<% } else { %>
+<% it.pets.forEach(function(pet) { %>
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title"><%= pet.name %> · <%= pet.type %></h2>
+    <dl class="meta-dl">
+      <% if (pet.carrier_location) { %><dt>Transportbox</dt><dd><%= pet.carrier_location %></dd><% } %>
+      <% if (pet.food) { %><dt>Futter</dt><dd><%= pet.food %></dd><% } %>
+      <% if (pet.vet) { %><dt>Tierarzt</dt><dd><%= pet.vet %></dd><% } %>
+    </dl>
+    <% if (pet.notes && pet.notes.length > 0) { %>
+    <md-list>
+      <% pet.notes.forEach(function(note, index) { %>
+      <md-list-item>
+        <md-icon slot="start">info</md-icon>
+        <div slot="headline"><%= note %></div>
+      </md-list-item>
+      <% if (index < pet.notes.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+    <% } %>
+  </div>
+</md-elevated-card>
+<% }) %>
+<% } %>

@@ -1,0 +1,87 @@
+<md-elevated-card class="emergency-card">
+  <div class="card-padding emergency-card__inner">
+    <div>
+      <p class="emergency-card__label">Notruf</p>
+      <p class="emergency-card__number"><%= it.emergencyNumber %></p>
+      <% if (it.policeNumber) { %>
+      <p class="emergency-card__secondary">Polizei <%= it.policeNumber %></p>
+      <% } %>
+    </div>
+    <md-filled-button href="tel:<%= it.emergencyNumber.replace(/\s/g, '') %>">
+      <md-icon slot="icon">call</md-icon>
+      Jetzt anrufen
+    </md-filled-button>
+  </div>
+</md-elevated-card>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Wichtigste Kontakte</h2>
+    <% if (it.topContacts.length === 0) { %>
+    <p class="empty-text">Keine Kontakte hinterlegt.</p>
+    <% } else { %>
+    <md-list>
+      <% it.topContacts.forEach(function(contact, index) { %>
+      <md-list-item type="link" href="tel:<%= contact.phone.replace(/\s/g, '') %>">
+        <md-icon slot="start">person</md-icon>
+        <div slot="headline"><%= contact.name %></div>
+        <div slot="supporting-text"><%= contact.role %> · <%= contact.phone %></div>
+      </md-list-item>
+      <% if (index < it.topContacts.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+    <div style="margin-top: 0.75rem;">
+      <md-text-button href="contacts.html">Alle Kontakte</md-text-button>
+    </div>
+    <% } %>
+  </div>
+</md-elevated-card>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Treffpunkte</h2>
+    <% if (it.topMeetingPoints.length === 0) { %>
+    <p class="empty-text">Keine Treffpunkte hinterlegt.</p>
+    <% } else { %>
+    <md-list>
+      <% it.topMeetingPoints.forEach(function(point, index) { %>
+      <md-list-item>
+        <md-icon slot="start">place</md-icon>
+        <div slot="headline"><%= point.name %></div>
+        <div slot="supporting-text"><%= point.location %></div>
+      </md-list-item>
+      <% if (index < it.topMeetingPoints.length - 1) { %><md-divider inset></md-divider><% } %>
+      <% }) %>
+    </md-list>
+    <div style="margin-top: 0.75rem;">
+      <md-text-button href="meeting-points.html">Alle Treffpunkte</md-text-button>
+    </div>
+    <% } %>
+  </div>
+</md-elevated-card>
+
+<md-elevated-card>
+  <div class="card-padding">
+    <h2 class="card-title">Schnellzugriff</h2>
+    <div class="quick-grid">
+      <md-outlined-card class="quick-tile-card">
+        <a class="quick-tile" href="power-outage.html"><md-icon>bolt</md-icon><span>Stromausfall</span></a>
+      </md-outlined-card>
+      <md-outlined-card class="quick-tile-card">
+        <a class="quick-tile" href="checklists.html"><md-icon>checklist</md-icon><span>Checklisten</span></a>
+      </md-outlined-card>
+      <md-outlined-card class="quick-tile-card">
+        <a class="quick-tile" href="pets.html"><md-icon>pets</md-icon><span>Haustiere</span></a>
+      </md-outlined-card>
+      <md-outlined-card class="quick-tile-card">
+        <a class="quick-tile" href="medication.html"><md-icon>medication</md-icon><span>Medikamente</span></a>
+      </md-outlined-card>
+      <md-outlined-card class="quick-tile-card">
+        <a class="quick-tile" href="documents.html"><md-icon>description</md-icon><span>Dokumente</span></a>
+      </md-outlined-card>
+      <md-outlined-card class="quick-tile-card">
+        <a class="quick-tile" href="emergency-card.html"><md-icon>badge</md-icon><span>Notfallkarte</span></a>
+      </md-outlined-card>
+    </div>
+  </div>
+</md-elevated-card>

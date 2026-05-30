@@ -1,0 +1,6 @@
+pets:
+  - name: "Emma"
+    type: "Katze"
+    carrier_location: "Flur-Schrank"
+    food: "Nassfutter morgens und abends"
+    vet: "Tierarztpraxis Dr. Brenner, Freising"

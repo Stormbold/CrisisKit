@@ -1,0 +1,27 @@
+checklists:
+  - title: "Stromausfall"
+    description: "Erste Minuten im Homelab"
+    items:
+      - "USV-Status und verbleibende Laufzeit prüfen"
+      - "Nicht-kritische Dienste kontrolliert herunterfahren"
+      - "Router und Switch: Akkulaufzeit notieren"
+      - "Handy-Akku und Powerbank schonen"
+      - "Netzbetreiber-Störung prüfen (116 116)"
+
+  - title: "Wiederanlauf nach Stromrückkehr"
+    description: "Reihenfolge beim Hochfahren"
+    items:
+      - "USV auf Netzbetrieb prüfen"
+      - "Switch / Router einschalten"
+      - "NAS und Server nacheinander starten"
+      - "DNS und Reverse Proxy prüfen"
+      - "Backups und Monitoring verifizieren"
+
+  - title: "Notgepäck IT"
+    description: "Physisch griffbereit"
+    items:
+      - "Taschenlampe"
+      - "Powerbank"
+      - "USB-Stick mit Recovery-Dokumentation"
+      - "Laptop mit Offline-Dokumentation"
+      - "Kabeltester / Ersatz-Netzteil"
